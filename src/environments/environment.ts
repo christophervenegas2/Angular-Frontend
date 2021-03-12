@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: '/api/examen/CreditCard'
+  baseUrl: 'http://backend-svc.cvenegas/api/examen/'
 };
 
 /*

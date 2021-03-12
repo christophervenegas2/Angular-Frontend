@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: '/api/examen/CreditCard'
+  baseUrl: 'http://backend-svc.cvenegas/api/examen/'
 };

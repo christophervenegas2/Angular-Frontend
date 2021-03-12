@@ -10,27 +10,27 @@ import { CreditCard, NuevaCreditCard } from '../models/creditcard';
 export class CreditCardService {
   
   private creditCard: CreditCard = { id: "", name: "", money: 0};
-  private baseUrl: string = environment.baseUrl;
+  private service: string = environment.baseUrl + "CreditCard";
 
   constructor(private http: HttpClient) { }
 
   getCreditCards(): Observable<CreditCard> {
-    const url = this.baseUrl;
+    const url = this.service;
     return this.http.get<CreditCard>( url );
   }
 
   getCreditCardByID(id: string): Observable<CreditCard> {
-    const url = `${this.baseUrl}/${id}`
+    const url = `${this.service}/${id}`
     return this.http.get( url );
   }
 
   postCreditCard( data: any ):Observable<any> {
-    const url = this.baseUrl;
+    const url = this.service;
     return this.http.post( url, data )
   }
 
   deleteProduct(id: string): Observable<any> {
-    const url = `${this.baseUrl}/${id}`
+    const url = `${this.service}/${id}`
     return this.http.delete(url);
   }
 }
